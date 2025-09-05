@@ -1,6 +1,6 @@
 [package]
 name = "opencli"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Matthias Baer <matthiasbaer@bluewin.ch>"]
 description = "OpenCLI struct definitions for serializing and deserializing"
 keywords = ["opencli", "schema"]

@@ -15,7 +15,7 @@ mod error;
 pub use error::Error;
 
 /// This is the root object of the OpenCLI Description.
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliDocument {
     /// The OpenCLI version number
@@ -57,7 +57,7 @@ pub struct OpenCliDocument {
     pub metadata: Vec<OpenCliMetadata>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliInfo {
     /// The application title
@@ -83,7 +83,7 @@ pub struct OpenCliInfo {
     pub version: String,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliConventions {
     /// Whether or not grouping of short options are allowed
@@ -95,7 +95,7 @@ pub struct OpenCliConventions {
     pub option_argument_separator: Option<String>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliContact {
     /// The identifying name of the contact person/organization
@@ -111,7 +111,7 @@ pub struct OpenCliContact {
     pub email: Option<String>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliLicense {
     /// The license name
@@ -123,7 +123,7 @@ pub struct OpenCliLicense {
     pub identifier: Option<String>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliCommand {
     /// The command name
@@ -170,7 +170,7 @@ pub struct OpenCliCommand {
     pub metadata: Vec<OpenCliMetadata>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliArgument {
     /// The argument name
@@ -205,7 +205,7 @@ pub struct OpenCliArgument {
     pub metadata: Vec<OpenCliMetadata>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliOption {
     /// The option name
@@ -244,7 +244,7 @@ pub struct OpenCliOption {
     pub metadata: Vec<OpenCliMetadata>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliArity {
     /// The minimum number of values allowed
@@ -256,7 +256,7 @@ pub struct OpenCliArity {
     pub maximum: Option<i32>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliExitCode {
     /// The exit code
@@ -267,7 +267,7 @@ pub struct OpenCliExitCode {
     pub description: Option<String>,
 }
 
-#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
 pub struct OpenCliMetadata {
     /// The metadata name
